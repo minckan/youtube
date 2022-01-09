@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
+import React, { memo, useRef } from 'react';
 import styles from './header.module.css'
 
-const Header = ({onSearch}) => {
+const Header = memo(({onSearch}) => {
     const inputRef = useRef()
 
     const handleSearch = () => {
@@ -29,6 +29,6 @@ const Header = ({onSearch}) => {
             </button>
         </header>
     )
-}
+})
 
 export default Header;
